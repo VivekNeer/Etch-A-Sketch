@@ -1,0 +1,55 @@
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 320px;
+    height: 320px;
+    max-width: 380px;
+    min-height: 250px;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    outline: 2px solid black;
+    overflow: hidden;
+}
+
+.flex-row {
+    display: flex;
+    gap: 0; /* Remove the gap between boxes */
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80vw;
+        height: 80vw;
+        margin-top: 10vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90vw;
+        height: 90vw;
+        margin-top: 10vh;
+    }
+}
+
+.box {
+    flex: 1;
+    background-color: beige;
+    border: 1px solid #2980b9;
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1; /* Ensure the aspect ratio is 1:1 */
+}
+
+/* Optional: Add hover effect */
+.box:hover {
+    background-color: #2980b9;
+}
