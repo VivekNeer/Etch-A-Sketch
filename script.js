@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
     const container = document.querySelector('.container');
 
     for (let i = 0; i < 16; i++) {
