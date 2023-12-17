@@ -19,3 +19,16 @@ window.addEventListener("load", function () {
         }
     }
 });
+
+// Function to reset box colors to default
+function resetBoxes() {
+    const boxes = document.querySelectorAll('.box');
+
+    boxes.forEach(box => {
+        box.style.backgroundColor = 'rgb(245, 245, 245)';
+    });
+}
+
+// Event listener for the reset button
+const resetButton = document.getElementById('resetButton');
+resetButton.addEventListener('click', resetBoxes);
