@@ -18,11 +18,10 @@ body {
     margin-top: 10vh; 
     margin-bottom: 10vh; 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     outline: 2px solid black;
     overflow: hidden;
 }
-
 
 .flex-row {
     display: flex;
@@ -30,6 +29,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    body {
+        flex-direction: column; 
+    }
+
     .container {
         width: 80vw;
         height: 80vw;
@@ -44,6 +47,15 @@ body {
         margin-top: 10vh;
     }
 }
+
+
+
+
+.flex-row {
+    display: flex;
+    gap: 0; 
+}
+
 
 .box {
     flex: 1;

@@ -87,3 +87,35 @@ function showSliderValue() {
 showSliderValue();
 window.addEventListener("resize",showSliderValue);
 slider_input.addEventListener('input', showSliderValue, false);
+
+
+// Function to handle the confirm button click event
+function confirmSliderValue() {
+    const sliderValue = parseInt(document.getElementById('slider_input').value);
+    const gridSize = Math.floor((sliderValue / 100) * 100); // Convert slider value to grid size
+
+    // Update the container to fit the new grid size
+    const container = document.querySelector('.container');
+    container.innerHTML = ''; // Clear existing content
+
+    for (let i = 0; i < gridSize; i++) {
+        const row = document.createElement('div');
+        row.classList.add('flex-row');
+        container.appendChild(row);
+
+        for (let j = 0; j < gridSize; j++) {
+            const box = document.createElement('div');
+            box.classList.add('box');
+            row.appendChild(box);
+
+            // Add click event listener to each box using the new function
+            box.addEventListener('click', function () {
+                handleBoxClick(box, useRandomColor);
+            });
+        }
+    }
+
+    // Set the flag to false to use the default behavior
+    useRandomColor = false;
+}
+
