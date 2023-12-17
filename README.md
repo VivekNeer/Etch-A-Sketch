@@ -1,15 +1,14 @@
-Etch-A-Sketch 🎨
+# Etch-A-Sketch 🎨
 
-Etch-A-Sketch is a cool web app that lets you draw on a grid with your mouse or keyboard. You can pick the size of the grid, the color of the drawing, and the mode of drawing (normal or rainbow). You can also erase your drawing or start fresh with a blank grid.
-Demo 🚀
+## Introduction
+Etch-A-Sketch is an engaging web app that provides an interactive platform for drawing on a grid. Whether you prefer using your mouse or keyboard, Etch-A-Sketch allows you to unleash your creativity. Customize the grid size, choose your preferred drawing color, and experiment with different drawing modes, including normal and rainbow. Erase your creations or start fresh with a blank grid to continue your artistic journey.
 
-You can check out the live demo of Etch-A-Sketch here.
-Installation 💻
+## Demo 🚀
+Explore the live demo of Etch-A-Sketch [here]( vivekneer.github.io/Etch-A-Sketch/).
 
-To run Etch-A-Sketch on your own computer, you need to have Git and a web browser installed.
+## Installation 💻
+To run Etch-A-Sketch on your computer, follow these simple steps:
 
-Clone this repo using this command:
-
-git clone https://github.com/VivekNeer/Etch-A-Sketch.git
-
-Open the index.html file in your web browser and have fun drawing!
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/VivekNeer/Etch-A-Sketch.git
