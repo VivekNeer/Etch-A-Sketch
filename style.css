@@ -15,8 +15,8 @@ body {
     height: 320px;
     max-width: 380px;
     min-height: 250px;
-    margin-top: 10vh; /* You can adjust this margin if needed */
-    margin-bottom: 10vh; /* Add margin-bottom to create space at the bottom */
+    margin-top: 10vh; 
+    margin-bottom: 10vh; 
     display: flex;
     flex-direction: column;
     outline: 2px solid black;
@@ -26,7 +26,7 @@ body {
 
 .flex-row {
     display: flex;
-    gap: 0; /* Remove the gap between boxes */
+    gap: 0; 
 }
 
 @media (max-width: 768px) {
@@ -53,7 +53,6 @@ body {
     aspect-ratio: 1 / 1; /* Ensure the aspect ratio is 1:1 */
 }
 
-/* Optional: Add hover effect */
 .box:hover {
     background-color: #2980b9;
 }

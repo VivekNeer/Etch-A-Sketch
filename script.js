@@ -1,5 +1,16 @@
+function handleBoxClick(box, useRandomColor) {
+    if (useRandomColor) {
+        // Change the color to a random color on click
+        box.style.backgroundColor = getRandomColor();
+    } else {
+        // Change the color to black on click (default behavior)
+        box.style.backgroundColor = 'black';
+    }
+}
+
 window.addEventListener("load", function () {
     const container = document.querySelector('.container');
+    let useRandomColor = false; // Flag to determine the click behavior
 
     for (let i = 0; i < 16; i++) {
         const row = document.createElement('div');
@@ -11,13 +22,19 @@ window.addEventListener("load", function () {
             box.classList.add('box');
             row.appendChild(box);
 
-            // Add click event listener to each box
+            // Add click event listener to each box using the new function
             box.addEventListener('click', function () {
-                // Change the color to black on click
-                box.style.backgroundColor = 'black';
+                handleBoxClick(box, useRandomColor);
             });
         }
     }
+
+    // Event listener for the random button
+    const randomButton = document.getElementById('randomButton');
+    randomButton.addEventListener('click', function () {
+        // Toggle the flag when the random button is clicked
+        useRandomColor = !useRandomColor;
+    });
 });
 
 // Function to reset box colors to default
@@ -27,6 +44,16 @@ function resetBoxes() {
     boxes.forEach(box => {
         box.style.backgroundColor = 'rgb(245, 245, 245)';
     });
+}
+
+// Function to generate a random color
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
 
 // Event listener for the reset button
