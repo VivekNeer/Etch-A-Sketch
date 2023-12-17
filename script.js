@@ -10,6 +10,12 @@ window.addEventListener("load", function () {
             const box = document.createElement('div');
             box.classList.add('box');
             row.appendChild(box);
+
+            // Add click event listener to each box
+            box.addEventListener('click', function () {
+                // Change the color to black on click
+                box.style.backgroundColor = 'black';
+            });
         }
     }
 });
