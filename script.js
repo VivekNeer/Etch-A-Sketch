@@ -1,3 +1,6 @@
+// Declare useRandomColor as a global variable
+let useRandomColor = false;
+
 // Function to handle box click events
 function handleBoxClick(box, useRandomColor) {
     if (useRandomColor) {
@@ -11,7 +14,6 @@ function handleBoxClick(box, useRandomColor) {
 
 window.addEventListener("load", function () {
     const container = document.querySelector('.container');
-    let useRandomColor = false; // Flag to determine the click behavior
 
     for (let i = 0; i < 16; i++) {
         const row = document.createElement('div');
@@ -68,7 +70,6 @@ function getRandomColor() {
 const resetButton = document.getElementById('resetButton');
 resetButton.addEventListener('click', resetBoxes);
 
-
 // kudos to https://codepen.io/armanb/details/GRBjVgd 
 
 const slider_input = document.getElementById('slider_input'),
@@ -76,18 +77,17 @@ const slider_input = document.getElementById('slider_input'),
       slider_line = document.getElementById('slider_line');
 
 function showSliderValue() {
-  slider_thumb.innerHTML = slider_input.value;
-  const bulletPosition = (slider_input.value /slider_input.max),
+    slider_thumb.innerHTML = slider_input.value;
+    const bulletPosition = (slider_input.value / slider_input.max),
         space = slider_input.offsetWidth - slider_thumb.offsetWidth;
 
-  slider_thumb.style.left = (bulletPosition * space) + 'px';
-  slider_line.style.width = slider_input.value + '%';
+    slider_thumb.style.left = (bulletPosition * space) + 'px';
+    slider_line.style.width = slider_input.value + '%';
 }
 
 showSliderValue();
 window.addEventListener("resize",showSliderValue);
 slider_input.addEventListener('input', showSliderValue, false);
-
 
 // Function to handle the confirm button click event
 function confirmSliderValue() {
@@ -118,4 +118,3 @@ function confirmSliderValue() {
     // Set the flag to false to use the default behavior
     useRandomColor = false;
 }
-
